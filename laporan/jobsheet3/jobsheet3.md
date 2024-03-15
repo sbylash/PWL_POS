@@ -62,4 +62,4 @@
 
 12. Menurut kalian, lebih mudah menggunakan mana dalam melakukan operasi CRUD ke database (DB Façade / Query Builder / Eloquent ORM) ? jelaskan!
 
-    Jawab: Query Builder, karena masih mirip dengan query yang biasa digunakan.
+    Jawab: Query Builder, karena masih mirip dengan query yang biasa digunakan..
