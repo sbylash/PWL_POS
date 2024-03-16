@@ -11,6 +11,7 @@
 1. Praktikum 1 - $fillable
 
     ![alt text](gambar/1.png)
+
     ![alt text](gambar/2.png)
 
 2. Praktikum 2.1 – Retrieving Single Models
@@ -58,56 +59,74 @@
 5. Praktikum 2.4 – Retreiving or Creating Models
 
     ![alt text](gambar/12.png)
+
     Jika data ditemukan akan menampilkan data dengan username manager dan nama Manager. Jika data yang dicari tidak ditemukan maka akan membuat data baru dengan isi data sesuai yang dicari.
 
     ![alt text](gambar/13.png)
+
     ![alt text](gambar/14.png)
+
     Data tidak ditemukan sehingga membuat data baru.
 
     ![alt text](gambar/15.png)
+
     Menampilkan data seperti pada gambar. Tapi jika tidak ditemukan maka akan dimasukkan kedalam database.
 
     ![alt text](gambar/16.png)
+
     ![alt text](gambar/17.png)
+
     Data sudah dibuat tapi belum masuk pada database.
 
     ![alt text](gambar/18.png)
+
     ![alt text](gambar/19.png)
+
     Data yang dibuat sudah masuk dalam database menggunakan "$user->save".
 
 6. Praktikum 2.5 – Attribute Changes
 
     ![alt text](gambar/20.png)
+
     "isDirty" menandakan adanya perubahan, ketika bernilai true menandakan telah dilakukan perubahan dan perlu disimpan. "isClean" menandakan tidak terjadi perubahan, ketika bernilai true menandakan bahwa tidak ada perubahan yang perlu diproses. Pada gambar tersebut menampilkan perubahan yang disimpan.
 
     ![alt text](gambar/21.png)
+
     ![alt text](gambar/22.png)
+
     Menampilkan true berarti terdapat perubahan sehingga data yang dimasukkan akan disimpan.
 
 7. Praktikum 2.6 – Create, Read, Update, Delete (CRUD)
 
     ![alt text](gambar/23.png)
+
     Menampilkan data yang ada pada tabel data user.
 
     ![alt text](gambar/25.png)
+
     Klik "+Tambah User" pada gambar sebelumnya, maka akan menampilkan gambar diatas untuk menginputkan data baru.
 
     ![alt text](gambar/26.png)
+
     Setelah input data, maka simpan data tersebut.
 
     ![alt text](gambar/27.png)
+
     Data yang telah di input dan disimpan akan terlihat pada tabel data user.
 
     ![alt text](gambar/29.png)
     Form untuk mengubah data.
 
     ![alt text](gambar/30.png)
+
     Menyimpan data yang baru diubah, dan menampilkan seperti pada gambar.
 
     ![alt text](gambar/31.png)
+
     Untuk menghapus data yang ingin dihapus.
 
 8. Praktikum 2.7 – Relationships
 
     ![alt text](gambar/32.png)
+
     Menampilkan relasi antar tabel yang dipilih.
