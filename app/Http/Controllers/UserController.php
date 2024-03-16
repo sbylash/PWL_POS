@@ -10,6 +10,14 @@ class UserController extends Controller
 {
     public function index()
     {
+        $user = UserModel::with('level')->get();
+        dd($user);
+    }
+
+        // $user = UserModel::findOr(1, ['username', 'nama'], function () {
+        //     abort(404);
+        // });
+
         // $user = UserModel::where('level_id', 2)->count();
         // return view('user', ['data' => $user]);
 
@@ -36,9 +44,7 @@ class UserController extends Controller
         // $user = UserModel::all();
         // return view('user', ['data' => $user]);
 
-        $user = UserModel::with('level')->get();
-        dd($user);
-    }
+    
 
     public function tambah() {
         return view('user_tambah');
