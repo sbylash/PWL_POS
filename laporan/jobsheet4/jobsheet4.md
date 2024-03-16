@@ -16,34 +16,43 @@
 2. Praktikum 2.1 – Retrieving Single Models
 
     ![alt text](gambar/3.png)
+
     Disini menampilkan data user dengan id 1 dari kode program "$user = UserModel::find(1);".
 
     ![alt text](gambar/4.png)
+
     Disini menampilkan data user dengan level id 1 pada daftar urutan pertama dari kode program "$user = UserModel::where('level_id', 1)->first();".
 
     ![alt text](gambar/5.png)
+
     Disini menampilkan data user dengan level id 1 dari kode program "$user = UserModel::firstWhere('level_id', 1);". Sama saja dengan sebelumnya, tapi lebih sederhana penulisannya.
 
     ![alt text](gambar/6.png)
+
     Untuk mencari data dari tabel users dengan id 1. Jika tidak ditemukan, maka mencarinya berdasarkan username atau nama. Jika tidak ditemukan juga, akan menghasilkan respons HTTP 404. Pada halaman web yang ditampilkan menampilkan primary key 1 karena ditemukan.
 
     ![alt text](gambar/7.png)
+
     Seperti yang diatas, tapi id 20 tidak ditemukan maka menampilkan 404.
 
 3. Praktikum 2.2 – Not Found Exceptions
 
     ![alt text](gambar/8.png)
+
     Menampilkan data user dengan level id 1. Pada kode program, jika id 1 ditemukan maka menampilkan seperti pada gambar, jika tidak ditemukan akan menampilkan 404.
 
     ![alt text](gambar/9.png)
+
     Menampilkan 404 karena tidak menemukan username dengan nilai manager9.
 
 4. Praktikum 2.3 – Retreiving Aggregrates
 
     ![alt text](gambar/10.png)
+
     Menampilkan jumlah user dengan level id 2 yang berjumlah 1.
 
     ![alt text](gambar/11.png)
+
     Menampilkan jumlah user dengan level id 2 yang berjumlah 1 dengan tampilan seperti pada gambar.
 
 5. Praktikum 2.4 – Retreiving or Creating Models
