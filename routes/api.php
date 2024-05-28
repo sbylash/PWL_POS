@@ -2,11 +2,11 @@
 
 use App\Http\Controllers\Api\BarangController;
 use App\Http\Controllers\Api\KategoriController;
-use App\Http\Controllers\Api\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\Api\LevelController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,3 +49,11 @@ Route::post('barang', [BarangController::class, 'store']);
 Route::get('barang/{barang}', [BarangController::class, 'show']);
 Route::put('barang/{barang}', [BarangController::class, 'update']);
 Route::delete('barang/{barang}', [BarangController::class, 'destroy']);
+
+Route::post('/register1', App\Http\Controllers\Api\RegisterController::class)->name('register1');
+
+Route::post('/barang1', [BarangController::class, 'store'])->name('barang1');
+Route::get('/barang1/{barang}', [BarangController::class, 'show']);
+
+Route::post('/transaksi1', [TransaksiController::class, 'store'])->name('transaksi1');
+Route::get('/transaksi1/{transaksi}', [TransaksiController::class, 'show']);
