@@ -127,5 +127,7 @@ Route::group(['middleware' => ['auth']], function(){
 Route::get('/', function () {
     return view('welcome');
 });
+
+//jobsheet 12
 Route::get('/file-upload', [FileUploadController::class, 'fileUpload']);
 Route::post('/file-upload', [FileUploadController::class, 'prosesFileUpload']);

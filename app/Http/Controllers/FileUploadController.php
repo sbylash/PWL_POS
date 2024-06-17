@@ -11,6 +11,7 @@ class FileUploadController extends Controller
     }
 
     public function prosesFileUpload(Request $request) {
+
         // dump($request->berkas);
         //dump($request->file('file'));
         //return "Pemrosesan file upload disini";
@@ -30,23 +31,35 @@ class FileUploadController extends Controller
         // else {
         //     echo "Tidak ada berkas yang di upload";
         // }
+
         $request->validate([
-            'berkas'=>'required|file|image|max:500',]);
+            'nama'=>'required|string|max:225',
+            'berkas'=>'required|file|image|max:500'
+        ]);
+
             //$path = $request->berkas->store('upload');
             //$path = $request->berkas->storeAs('upload','berkas');
             //$namaFile=$request->berkas->getClientOriginalName();
-            $extfile=$request->berkas->getClientOriginalName();
-            $namaFile='web-' .time().".".$extfile;
+            //$extfile=$request->berkas->getClientOriginalName();
+            //$namaFile = 'web-'.time().".".$extfile;
             //$path=$request->berkas->storeAs('public', $namaFile);
 
-            $path = $request->berkas->move('gambar',$namaFile);
-            $path = str_replace("\\","//", $path);
-            echo "Variabel path berisi: $path <br>";
+            $file = $request->file('berkas');
+            $namaFile = $request->input('nama').".". $file->getClientOriginalExtension();
 
-            $pathBaru=asset('gambar/'.$namaFile);
-            echo "proses upload berhasil, file berada di: $path";
-            echo "<br>";
-            echo "Tampilkan link: <a href='$pathBaru'>$pathBaru</a>";
+            $path = $file->move('gambar', $namaFile);
+            $path = str_replace("\\","//", $path);
+            // echo "Variabel path berisi: $path <br>";
+
+            $pathBaru=asset('gambar/'. $namaFile);
+
+            // echo "Proses upload berhasil, file berada di: $path";
+            // echo "<br>";
+            // echo "Tampilkan link: <a href='$pathBaru'>$pathBaru</a>";
             //echo $request->berkas->getClientOriginalName(). " lolos validasi";
+
+            echo "Gambar berhasil di upload ke <a href='$pathBaru'>$namaFile</a>";
+            echo "<br><br>";
+            echo "<img src='$pathBaru'>";
     }
 }

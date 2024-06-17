@@ -12,12 +12,21 @@
 
 <body>
 
-    <div class="container mt-3">
-        <h2>File Upload</h2>
+        <h2 class="m-3">File Upload</h2>
         <hr>
-        <form action="{{ url('/file-upload') }}" method="POST" enctype="multipart/form-data">
+        <form class="m-3" action="{{ url('/file-upload') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            
+            {{-- Nama File --}}
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama Gambar</label>
+                <input type="text" class="form-control" id="nama" name="nama">
+                @error('nama')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
            
+            {{-- Gambar Profile --}}
             <div class="mb-3">
                 <label for="berkas" class="form-label">Gambar Profile</label>
                 <input type="file" class="form-control" id="berkas" name="berkas">
@@ -26,11 +35,14 @@
                 @enderror
             </div>
 
+            {{-- Tombol Submit --}}
             <button type="submit" class="btn btn-primary my-2">Upload</button>
         </form>
+
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 
